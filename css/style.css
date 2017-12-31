@@ -1,0 +1,171 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #eee;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 980px;
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  margin: 20px auto;
+  font-size: 2rem;
+  border-left: 10px solid #7baeb5;
+  border-bottom: 1px solid #7baeb5;
+  padding: 10px;
+  max-width: 400px;
+  text-align: center;
+}
+
+ul.mainArew {
+  width: auto;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  border: 1px solid #ccc;
+}
+
+ul.mainArew li {
+  margin: 5px;
+}
+
+ul.mainArew li img {
+  max-width: 100%;
+  width: auto;
+}
+
+ul.mainArew li img:hover {
+  opacity: 0.8;
+}
+
+ul.listArea {
+  max-width: 400px;
+  margin: 0 auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 3px;
+}
+
+ul.listArea li {
+  padding: 4px;
+  width: calc(50% - 0px);
+  max-height: 150px;
+  background-color: #aaa;
+}
+
+ul.listArea li img {
+  width: 100%;
+  height: 145px;
+}
+
+@media only screen and (max-width: 768px) {
+  ul.listArea li img {
+    height: 120px;
+  }
+}
+
+ul.listArea li img:hover {
+  opacity: 0.8;
+}
+
+div#glayLayer {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+div#glayLayer:hover {
+  opacity: 0.8;
+}
+
+#overLayer {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 1px;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  #overLayer {
+    top: 55%;
+  }
+}
+
+#overLayer img {
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  max-width: calc(100vw - 20px);
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  #overLayer img {
+    max-height: 80vh;
+  }
+}
+
+#overLayer img:hover {
+  opacity: 1;
+}
+
+#overLayer span.alt {
+  display: block;
+  color: white;
+}
+
+#overLayer .close {
+  font-size: 32px;
+  color: #666;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 40px;
+  height: 40px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: .9;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.2s;
+}
+
+#overLayer .close:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=style.css.map */
